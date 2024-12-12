@@ -8,7 +8,7 @@ With MAL it is possible to encode cybersecurity competence so that it can be reu
 
 ### MAL resources
 MAL has been developed by Software Systems Architecture and Security group at KTH Royal Institute of Technology in Sweden and this repo gathers results of many of the various projects that the research group has been working on over the years. A few highlights of these are:
-- The MAL Toolbox that contains support for building asset instance models from a given MAL language and then generating the corresponding attack graph from the asset instance model. Documentation can be found here. https://mal-lang.org/mal-toolbox/index.html 
+- The [MAL Toolbox](https://github.com/mal-lang/mal-toolbox), which contains support for building asset instance models from a given MAL language and then generating the corresponding attack graph from the asset instance model. Documentation can be found [here](https://mal-lang.org/mal-toolbox/index.html). 
 - exampleLang, which is a language devised to illustrate how MAL works. A good place to start if you are new to MAL.
 - coreLang, which is a language that have the ambition to cover the most common attack vectors found in common IT environments.
 - MAL-GUI, which is a super simple drag-n-drop studio for creating instance models given some chosen MAL-language. (However, it does not support visualization for attack graphs, for that we recommend Neo4j - see the MAL Toolbox documentation.)
