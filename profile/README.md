@@ -18,3 +18,6 @@ MAL has been developed by Software Systems Architecture and Security group [[1]]
 More academic papers related to various MAL projects have been produced than what can be mentioned here, but there exist two papers on MAL per se:
 - Pontus Johnson, Robert Lagerström, and Mathias Ekstedt. 2018. A Meta Language for Threat Modeling and Attack Simulations. In Proceedings of the 13th International Conference on Availability, Reliability and Security (ARES '18). Association for Computing Machinery, New York, NY, USA, Article 38, 1–8. https://doi.org/10.1145/3230833.3232799
 - Wojciech Wideł, Simon Hacks, Mathias Ekstedt, Pontus Johnson, Robert Lagerström, The meta attack language - a formal description, Computers & Security, Volume 130, 2023, 103284, ISSN 0167-4048, https://doi.org/10.1016/j.cose.2023.103284
+
+### ..And more
+Also check out our sister project [DynaMAL](https://gitlab.com/kth-ssas/dynamal-group/dynamal-documentation) with logic to update the asset and attack graphs dynamically during simulations.
