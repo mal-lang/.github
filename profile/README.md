@@ -19,7 +19,8 @@ MAL has been developed by Software Systems Architecture and Security group [[1]]
 
 - The [MAL Toolbox](https://github.com/mal-lang/mal-toolbox), which contains support for building asset instance models from a given MAL language and then generating the corresponding attack graph from the asset instance model.
 
-- The [MAL Simulator](https://github.com/mal-lang/mal-simulator), which is an infrastructure for using the MAL attack graphs as game board where defender and attacker agents can “play” each other. It can used as a simulator for machine learning of the agents. 
+- The [MAL Simulator](https://github.com/mal-lang/mal-simulator), which is an infrastructure for using the MAL attack graphs as game board where defender and attacker agents can “play” each other. It can used as a simulator for machine learning of the agents.
+  - Find example simulator scenarios in the [malsim-scenarios repository](https://github.com/mal-lang/malsim-scenarios).
 
 - The [MAL-GUI](https://github.com/mal-lang/mal-gui), which is a super simple drag-n-drop studio for creating instance models given some chosen MAL-language. (However, it does not support visualization for attack graphs, for that we recommend Neo4j - see the MAL Toolbox documentation.)
 
@@ -32,6 +33,7 @@ MAL has been developed by Software Systems Architecture and Security group [[1]]
 - [coreLang](https://github.com/mal-lang/coreLang), which is a language that have the ambition to cover the most common attack vectors found in common IT environments.
 
 - [tyrLang](https://github.com/mal-lang/tyrLang), a simpler variant of coreLang built for an external project.
+
 
 #### Academic papers
 More academic papers related to various MAL projects have been produced than what can be mentioned here, but there exist two papers on MAL per se:
