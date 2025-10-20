@@ -41,4 +41,4 @@ More academic papers related to various MAL projects have been produced than wha
 - Wojciech Wideł, Simon Hacks, Mathias Ekstedt, Pontus Johnson, Robert Lagerström, The meta attack language - a formal description, Computers & Security, Volume 130, 2023, 103284, ISSN 0167-4048, https://doi.org/10.1016/j.cose.2023.103284
 
 #### ..And more
-Also check out our sister project [DynaMAL](https://gitlab.com/kth-ssas/dynamal-group/dynamal-documentation) with logic to update the asset and attack graphs dynamically during simulations.
+Also check out our sister project [DynaMAL](https://gitlab.com/kth-ssas/dynamal-group/dynamal-documentation) featuring logic to update the asset and attack graphs dynamically during simulations, based on attacker actions.
