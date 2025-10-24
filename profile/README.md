@@ -11,7 +11,9 @@ MAL has been developed by Software Systems Architecture and Security group [[1]]
 
 #### MAL documentation
 
-- [MAL Documentation wiki](https://github.com/mal-lang/mal-documentation/wiki)
+- [MAL Documentation wiki](https://github.com/mal-lang/mal-documentation/wiki) to learn how MAL languages are built
+
+- [MAL toolbox documentation](https://mal-lang.org/mal-toolbox/)
 
 - [MAL toolbox tutorial](https://github.com/mal-lang/mal-toolbox-tutorial) to learn how the MAL tools works.
 
