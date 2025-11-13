@@ -30,7 +30,7 @@ MAL has been developed by Software Systems Architecture and Security group [[1]]
 
 #### MAL Languages
 
-- [exampleLang](https://github.com/mal-lang/exampleLang/blob/master/src/main/mal/exampleLang.mal), which is a language devised to demonstrate how MAL works and good to start with if you are new to MAL.
+- [exampleLang](https://github.com/mal-lang/exampleLang), which is a language devised to demonstrate how MAL works and good to start with if you are new to MAL.
 
 - [coreLang](https://github.com/mal-lang/coreLang), which is a language that has the ambition to cover the most common attack vectors found in common IT environments.
 
