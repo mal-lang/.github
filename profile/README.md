@@ -9,19 +9,14 @@ With MAL it is possible to encode cybersecurity competence so that it can be reu
 ### MAL resources
 MAL has been developed by Software Systems Architecture and Security group [[1]](https://www.kth.se/cs/nse/research/software-systems-architecture-and-security) [[2]](https://github.com/KTH-SSAS) at KTH Royal Institute of Technology in Sweden and this GitHub organization gathers results of many of the various projects that the research group has been working on over the years. A few highlights of these are:
 
-#### MAL documentation
-
-- [MAL Documentation wiki](https://github.com/mal-lang/mal-documentation/wiki) to learn how MAL languages are built
-
-- [MAL toolbox wiki](https://github.com/mal-lang/mal-toolbox/wiki)
-
-- [MAL toolbox tutorial](https://github.com/mal-lang/mal-toolbox-tutorial) to learn how the MAL tools work.
-
-#### MAL Tools
+- [MAL Documentation](https://github.com/mal-lang/mal-documentation/wiki) to learn how MAL languages are built
 
 - The [MAL Toolbox](https://github.com/mal-lang/mal-toolbox), which contains support for building asset instance models from a given MAL language and then generating the corresponding attack graph from the asset instance model.
+  - [MAL toolbox wiki](https://github.com/mal-lang/mal-toolbox/wiki)
+  - [MAL toolbox tutorial](https://github.com/mal-lang/mal-toolbox-tutorial) to learn how the MAL tools work.
 
 - The [MAL Simulator](https://github.com/mal-lang/mal-simulator), which is an infrastructure for using the MAL attack graphs as a game board where defender and attacker agents can “play” against each other. It can be used as a simulator for machine learning of the agents.
+  - [MAL Simulator Wiki](https://github.com/mal-lang/mal-simulator/wiki)
   - Find example simulator scenarios in the [malsim-scenarios repository](https://github.com/mal-lang/malsim-scenarios).
 
 - The [MAL-GUI](https://github.com/mal-lang/mal-gui), which is a super simple drag-n-drop studio for creating instance models given some chosen MAL-language. (However, it does not support visualization for attack graphs, for that we recommend Neo4j - see the MAL Toolbox documentation.)
