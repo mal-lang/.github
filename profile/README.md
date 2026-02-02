@@ -9,7 +9,7 @@ With MAL it is possible to encode cybersecurity competence so that it can be reu
 ### MAL resources
 MAL has been developed by Software Systems Architecture and Security group [[1]](https://www.kth.se/cs/nse/research/software-systems-architecture-and-security) [[2]](https://github.com/KTH-SSAS) at KTH Royal Institute of Technology in Sweden and this GitHub organization gathers results of many of the various projects that the research group has been working on over the years. A few highlights of these are:
 
-- [MAL Documentation](https://github.com/mal-lang/mal-documentation/wiki) to learn how MAL languages are built
+- [MAL Documentation Wiki](https://github.com/mal-lang/mal-documentation/wiki) to learn how MAL languages are built
 
 - The [MAL Toolbox](https://github.com/mal-lang/mal-toolbox), which contains support for building asset instance models from a given MAL language and then generating the corresponding attack graph from the asset instance model.
   - [MAL toolbox wiki](https://github.com/mal-lang/mal-toolbox/wiki)
