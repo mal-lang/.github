@@ -11,12 +11,18 @@ To build a language in MAL, you define four primary elements:
 - **Attack Steps:** The specific actions that can be taken against an Asset (e.g., _Connect_, _Authenticate_, _Guess Credentials_, or _Compromise_).
 - **Logic Links:** How one successful attack may trigger the next one. 
 
-**Example**: An attacker succeeds in the `Connect` action to a computer. They can now attempt to `Authenticate` (if they have credentials) or `guessCredentials`. Success in either leads to a `Compromise` of that computer. The compromised computer then allows the attacker to `Connect` to any other device on that same network.
-### **The Result**
+**Example**: An attacker succeeds in the `connect` action to a `Computer` asset. They can now attempt to `authenticate` (if they have credentials) or `guessCredentials`. Success in either leads to a `compromise` of that `Computer` asset. The compromised `Computer` asset then allows the attacker to `connect` to any other device on that same network.
+
+### **The outcome**
 By looking at your specific **system architecture** (how your assets are configured), MAL determines every possible attack vector and expresses them in an **attack graph**.
 
 ## Why MAL?
-With MAL it is possible to encode cybersecurity competence so that it can be reused for many system environments. Cybersecurity experts can describe how systems can be attacked and also defended, and this knowledge can be applied by system designers and maintainers for analyzing their particular system environment. MAL thus enables the construction of a digital twin for cybersecurity in which red team simulations can be made at scale. In addition, the effect of blue team interventions can be studied. This can be used for traditional threat modeling and security analysis identifying effective security design, but also for operations guiding protective actions given the observation of some particular attack chain. Moreover, the MAL asset graphs and attack graphs can also be used as a simulation infrastructure for simulation-based training of attacker and defender agents, for instance through machine learning.
+**MAL** allows cybersecurity expertise to be encoded and reused across diverse system environments. By capturing how systems are attacked and defended, MAL empowers designers and maintainers to analyze their specific infrastructures.
+
+MAL enables the creation of a **cybersecurity digital twin**, facilitating several high-level functions:
+- **Red & Blue Teaming:** Perform large-scale red team simulations and evaluate the effectiveness of blue team interventions.
+- **Threat Modeling:** Identify optimal security designs and guide operational protective actions based on observed attack chains.
+- **Simulation-Based Training:** Utilize MAL asset and attack graphs as an infrastructure to train attacker and defender agents, for instance by using methods like machine learning.
 
 ## MAL resources
 MAL has been developed by Software Systems Architecture and Security group [[1]](https://www.kth.se/cs/nse/research/software-systems-architecture-and-security) [[2]](https://github.com/KTH-SSAS) at KTH Royal Institute of Technology in Sweden and this GitHub organization gathers results of many of the various projects that the research group has been working on over the years. A few highlights of these are:
