@@ -10,7 +10,8 @@ To build a language in MAL, you define four primary elements:
 - **Relationships:** How those assets are related (e.g., A _Computer_ runs an _Application_; a _Computer_ is connected to a _Network_).
 - **Attack Steps:** The specific actions that can be taken against an Asset (e.g., _Connect_, _Authenticate_, _Guess Credentials_, or _Compromise_).
 - **Logic Links:** How one successful attack may trigger the next one. 
-Example: An attacker succeeds in the `Connect` action to a computer. They can now attempt to `Authenticate` (if they have credentials) or `guessCredentials`. Success in either leads to a `Compromise` of that computer. The compromised computer then allows the attacker to `Connect` to any other device on that same network.
+
+**Example**: An attacker succeeds in the `Connect` action to a computer. They can now attempt to `Authenticate` (if they have credentials) or `guessCredentials`. Success in either leads to a `Compromise` of that computer. The compromised computer then allows the attacker to `Connect` to any other device on that same network.
 ### **The Result**
 By looking at your specific **system architecture** (how your assets are configured), MAL determines every possible attack vector and expresses them in an **attack graph**.
 
