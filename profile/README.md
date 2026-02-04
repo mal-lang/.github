@@ -24,13 +24,18 @@ MAL enables the creation of a **cybersecurity digital twin**, facilitating sever
 - **Threat Modeling:** Identify optimal security designs and guide operational protective actions based on observed attack chains.
 - **Simulation-Based Training:** Utilize MAL asset and attack graphs as an infrastructure to train attacker and defender agents, for instance by using methods like machine learning.
 
+## The MAL workflow
+The usual workflow one would do with MAL is the following:
+1. You either use a pre-existing malLang or write your own.
+2. Load it with the modeling tool ([MAL Toolbox](https://github.com/mal-lang/mal-toolbox)), and create a model programmatically (using Python) or with the [MAL-GUI](https://github.com/mal-lang/mal-gui).
+3. Simulate attacks with the simulation tool ([MAL Simulator](https://github.com/mal-lang/mal-simulator)).
+
 ## MAL resources
 MAL has been developed by Software Systems Architecture and Security group [[1]](https://www.kth.se/cs/nse/research/software-systems-architecture-and-security) [[2]](https://github.com/KTH-SSAS) at KTH Royal Institute of Technology in Sweden and this GitHub organization gathers results of many of the various projects that the research group has been working on over the years. A few highlights of these are:
 
 ### MAL Specification
 
 - [MAL Documentation Wiki](https://github.com/mal-lang/mal-documentation/wiki) to learn how MAL languages are built
-
 
 ### Key Infrastructure
 
