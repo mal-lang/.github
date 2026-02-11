@@ -9,7 +9,7 @@ To build a language in MAL, you define four primary elements:
 - **Assets:** The categories of things in your system (e.g., Computers, Applications, Networks, Data).
 - **Relationships:** How those assets are related (e.g., A _Computer_ runs an _Application_; a _Computer_ is connected to a _Network_).
 - **Attack Steps:** The specific actions that can be taken against an Asset (e.g., _Connect_, _Authenticate_, _Guess Credentials_, or _Compromise_).
-- **Logic Links:** How one successful attack may trigger the next one. 
+- **Causal Links:** How one successful attack may trigger the next one. 
 
 **Example**: An attacker succeeds in the `connect` action to a `Computer` asset. They can now attempt to `authenticate` (if they have credentials) or `guessCredentials`. Success in either leads to a `compromise` of that `Computer` asset. The compromised `Computer` asset then allows the attacker to `connect` to any other device on that same network.
 
