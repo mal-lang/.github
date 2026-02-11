@@ -1,20 +1,43 @@
-## Welcome to the home of the Meta Attack Language (MAL)
+# Welcome to the home of the Meta Attack Language (MAL)
 
-### What is MAL?
-MAL is a language for creating domain-specific threat modeling languages - a malLang. MAL could be thought of as a framework for combining systems modeling such as UML with attack graphs. More precisely, MAL formalizes how to generate attack graphs from system model specifications. In a malLang you specify Asset categories (e.g. computers, applications, networks, data), how they are allowed to be related (e.g. computers can run applications and be connectedTo networks), what attack actions are possible to perform on the respective Assets (e.g. we can connect, authenticate, guessCredentials, and compromise computers) as well as which successful attack action would enable attempting new actions (e.g. after succeeding to connect to a computer you can either authenticate -if you have credentials- or guess the credentials. If either of these actions are successful you will have compromised the computer and you will be able to connect to all other computers located on the same network as the compromised computer.) Depending on how system assets are configured in an instance model -what the system architecture look like- this will thus determine what attack vectors are possible according to the domain-specific language and express them in an attack graph.
+## **What is MAL?**
+The **Meta Attack Language (MAL)** is a language used to create domain-specific threat modeling languages - a **malLang**.
 
-### Why MAL?
-With MAL it is possible to encode cybersecurity competence so that it can be reused for many system environments. Cybersecurity experts can describe how systems can be attacked and also defended, and this knowledge can be applied by system designers and maintainers for analyzing their particular system environment. MAL thus enables the construction of a digital twin for cybersecurity in which red team simulations can be made at scale. In addition, the effect of blue team interventions can be studied. This can be used for traditional threat modeling and security analysis identifying effective security design, but also for operations guiding protective actions given the observation of some particular attack chain. Moreover, the MAL asset graphs and attack graphs can also be used as a simulation infrastructure for simulation-based training of attacker and defender agents, for instance through machine learning.
+We can think of it as a bridge between **systems modeling** (like UML) and **attack graphs**. It formalizes the process of generating potential attack graphs based on how a system is designed.
+### **Core Components of a malLang**
+To build a language in MAL, you define four primary elements:
+- **Assets:** The categories of things in your system (e.g., Computers, Applications, Networks, Data).
+- **Relationships:** How those assets are related (e.g., A _Computer_ runs an _Application_; a _Computer_ is connected to a _Network_).
+- **Attack Steps:** The specific actions that can be taken against an Asset (e.g., _Connect_, _Authenticate_, _Guess Credentials_, or _Compromise_).
+- **Causal Links:** How one successful attack may trigger the next one. 
 
-### MAL resources
+**Example**: An attacker succeeds in the `connect` action to a `Computer` asset. They can now attempt to `authenticate` (if they have credentials) or `guessCredentials`. Success in either leads to a `compromise` of that `Computer` asset. The compromised `Computer` asset then allows the attacker to `connect` to any other device on that same network.
+
+### **The outcome**
+By looking at your specific **system architecture** (how your assets are configured), MAL determines every possible attack vector and expresses them in an **attack graph**.
+
+## Why MAL?
+**MAL** allows cybersecurity expertise to be encoded and reused across diverse system environments. By capturing how systems are attacked and defended, MAL empowers designers and maintainers to analyze their specific infrastructures.
+
+MAL enables the creation of a **cybersecurity digital twin**, facilitating several high-level functions:
+- **Red & Blue Teaming:** Perform large-scale red team simulations and evaluate the effectiveness of blue team interventions.
+- **Threat Modeling:** Identify optimal security designs and guide operational protective actions based on observed attack chains.
+- **Simulation-Based Training:** Utilize MAL asset and attack graphs as an infrastructure to train attacker and defender agents, for instance by using methods like machine learning.
+
+## The MAL workflow
+The usual workflow one would do with MAL is the following:
+1. You either use a pre-existing malLang or write your own.
+2. Load it with the modeling tool ([MAL Toolbox](https://github.com/mal-lang/mal-toolbox)), and create a model programmatically (using Python) or with the [MAL-GUI](https://github.com/mal-lang/mal-gui).
+3. Simulate attacks with the simulation tool ([MAL Simulator](https://github.com/mal-lang/mal-simulator)).
+
+## MAL resources
 MAL has been developed by Software Systems Architecture and Security group [[1]](https://www.kth.se/cs/nse/research/software-systems-architecture-and-security) [[2]](https://github.com/KTH-SSAS) at KTH Royal Institute of Technology in Sweden and this GitHub organization gathers results of many of the various projects that the research group has been working on over the years. A few highlights of these are:
 
-#### MAL Specification
+### MAL Specification
 
 - [MAL Documentation Wiki](https://github.com/mal-lang/mal-documentation/wiki) to learn how MAL languages are built
 
-
-#### Key Infrastructure
+### Key Infrastructure
 
 - The [MAL Toolbox](https://github.com/mal-lang/mal-toolbox), which contains support for building asset instance models from a given MAL language and then generating the corresponding attack graph from the asset instance model.
 
@@ -22,16 +45,16 @@ MAL has been developed by Software Systems Architecture and Security group [[1]]
 
 - The [MAL-GUI](https://github.com/mal-lang/mal-gui), which is a super simple drag-n-drop studio for creating instance models given some chosen MAL-language. (However, it does not support visualization for attack graphs, for that we recommend Neo4j - see the MAL Toolbox documentation.)
 
-#### Tutorials
+### Tutorials
 
 - [MAL toolbox tutorial](https://github.com/mal-lang/mal-toolbox-tutorial) to learn how the MAL tools work.
 
-#### Additional Infrastructure
+### Additional Infrastructure
 
 - The [mal-vs-code-extension](https://github.com/mal-lang/mal-vscode-extension) for MAL language support in VS Code.
 - [mal-language-server](https://github.com/mal-lang/mal-ls)
 
-#### MAL Languages
+### MAL Languages
 
 - [exampleLang](https://github.com/mal-lang/exampleLang), which is a language devised to demonstrate how MAL works and good to start with if you are new to MAL.
 
@@ -40,10 +63,10 @@ MAL has been developed by Software Systems Architecture and Security group [[1]]
 - [tyrLang](https://github.com/mal-lang/tyrLang), a simpler variant of coreLang built for an external project ([example scenarios](https://github.com/mal-lang/malsim-scenarios/tree/main/scenarios/tyrLang)).
 
 
-#### Academic papers
+### Academic papers
 More academic papers related to various MAL projects have been produced than what can be mentioned here, but there exist two papers on MAL per se:
 - Pontus Johnson, Robert Lagerström, and Mathias Ekstedt. 2018. A Meta Language for Threat Modeling and Attack Simulations. In Proceedings of the 13th International Conference on Availability, Reliability and Security (ARES '18). Association for Computing Machinery, New York, NY, USA, Article 38, 1–8. https://doi.org/10.1145/3230833.3232799
 - Wojciech Wideł, Simon Hacks, Mathias Ekstedt, Pontus Johnson, Robert Lagerström, The meta attack language - a formal description, Computers & Security, Volume 130, 2023, 103284, ISSN 0167-4048, https://doi.org/10.1016/j.cose.2023.103284
 
-#### ..And more
+### ..And more
 Also check out our sister project, [DynaMAL](https://gitlab.com/kth-ssas/dynamal-group/dynamal-documentation), featuring logic to update the asset and attack graphs dynamically during simulations, based on attacker actions.
