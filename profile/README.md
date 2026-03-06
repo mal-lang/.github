@@ -4,14 +4,14 @@
 The **Meta Attack Language (MAL)** is a language used to create domain-specific threat modeling languages - a **malLang**.
 
 We can think of it as a bridge between **systems modeling** (like UML) and **attack graphs**. It formalizes the process of generating potential attack graphs based on how a system is designed.
-### **Core Components of a malLang**
+### **Core components of a malLang**
 To build a language in MAL, you define four primary elements:
-- **Assets:** The categories of things in your system (e.g., Computers, Applications, Networks, Data).
-- **Relationships:** How those assets are related (e.g., A _Computer_ runs an _Application_; a _Computer_ is connected to a _Network_).
-- **Attack Steps:** The specific actions that can be taken against an Asset (e.g., _Connect_, _Authenticate_, _Guess Credentials_, or _Compromise_).
-- **Causal Links:** How one successful attack may trigger the next one. 
+- **Assets:** The categories of things in your system (e.g., Computers, Applications, Networks, Data, Credentials).
+- **Relationships:** How those assets are related (e.g., a Computer _runs_ Applications; a Computer _is connected to_ a Network).
+- **Attack Steps:** The specific actions that can be taken against an Asset (e.g., _connect_, _authenticate_, _guess credentials_, or _compromise_ a Computer).
+- **Causal Links:** How one successful attack may enable the next one. 
 
-**Example**: An attacker succeeds in the `connect` action to a `Computer` asset. They can now attempt to `authenticate` (if they have credentials) or `guessCredentials`. Success in either leads to a `compromise` of that `Computer` asset. The compromised `Computer` asset then allows the attacker to `connect` to any other device on that same network.
+**Example**: An attacker succeeds with the `connect` action to a `Computer` asset. They can now attempt to `authenticate` (if they have succeeded to `compromise` the right `Credentials`) or `guessCredentials`. Success in either leads to a `compromise` of that `Computer` asset. The compromised `Computer` asset then allows the attacker to `connect` to any other device on the `Network` that the `Computer` _is connected to_.
 
 ### **The outcome**
 By looking at your specific **system architecture** (how your assets are configured), MAL determines every possible attack vector and expresses them in an **attack graph**.
@@ -20,14 +20,14 @@ By looking at your specific **system architecture** (how your assets are configu
 **MAL** allows cybersecurity expertise to be encoded and reused across diverse system environments. By capturing how systems are attacked and defended, MAL empowers designers and maintainers to analyze their specific infrastructures.
 
 MAL enables the creation of a **cybersecurity digital twin**, facilitating several high-level functions:
-- **Red & Blue Teaming:** Perform large-scale red team simulations and evaluate the effectiveness of blue team interventions.
-- **Threat Modeling:** Identify optimal security designs and guide operational protective actions based on observed attack chains.
-- **Simulation-Based Training:** Utilize MAL asset and attack graphs as an infrastructure to train attacker and defender agents, for instance by using methods like machine learning.
+- **Red & blue teaming:** Perform large-scale red team simulations and evaluate the effectiveness of blue team interventions.
+- **Threat modeling:** Identify optimal security designs and guide operational protective actions based on observed attack chains.
+- **Simulation-based training:** Utilize MAL asset and attack graphs as an infrastructure to train attacker and defender agents, for instance by using methods like machine learning.
 
 ## The MAL workflow
 The usual workflow one would do with MAL is the following:
 1. You either use a pre-existing malLang or write your own.
-2. Load it with the modeling tool ([MAL Toolbox](https://github.com/mal-lang/mal-toolbox)), and create a model programmatically (using Python) or with the [MAL-GUI](https://github.com/mal-lang/mal-gui).
+2. Load it with the modeling tool ([MAL Toolbox](https://github.com/mal-lang/mal-toolbox)), and create a model programmatically (using Python) or manually with the [MAL-GUI](https://github.com/mal-lang/mal-gui).
 3. Simulate attacks with the simulation tool ([MAL Simulator](https://github.com/mal-lang/mal-simulator)).
 
 ## MAL resources
@@ -35,7 +35,7 @@ MAL has been developed by Software Systems Architecture and Security group [[1]]
 
 ### MAL Specification
 
-- [MAL Documentation Wiki](https://github.com/mal-lang/mal-documentation/wiki) to learn how MAL languages are built
+- [MAL documentation wiki](https://github.com/mal-lang/mal-documentation/wiki) documents the MAL syntax and sematics and describes how languages are built.
 
 ### Key Infrastructure
 
