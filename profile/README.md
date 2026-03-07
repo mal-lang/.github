@@ -27,34 +27,34 @@ MAL enables the creation of a **cybersecurity digital twin**, facilitating sever
 ## The MAL workflow
 The usual workflow one would do with MAL is the following:
 1. You either use a pre-existing malLang or write your own.
-2. Load it with the modeling tool ([MAL Toolbox](https://github.com/mal-lang/mal-toolbox)), and create a model programmatically (using Python) or manually with the [MAL-GUI](https://github.com/mal-lang/mal-gui).
-3. Simulate attacks with the simulation tool ([MAL Simulator](https://github.com/mal-lang/mal-simulator)).
+2. Load it with the modeling tool ([MAL toolbox](https://github.com/mal-lang/mal-toolbox)), and create a model programmatically (using Python) or manually with the [MAL-GUI](https://github.com/mal-lang/mal-gui).
+3. Simulate attacks with the simulation tool ([MAL simulator](https://github.com/mal-lang/mal-simulator)).
 
 ## MAL resources
 MAL has been developed by Software Systems Architecture and Security group [[1]](https://www.kth.se/cs/nse/research/software-systems-architecture-and-security) [[2]](https://github.com/KTH-SSAS) at KTH Royal Institute of Technology in Sweden and this GitHub organization gathers results of many of the various projects that the research group has been working on over the years. A few highlights of these are:
 
-### MAL Specification
+### MAL specification
 
 - [MAL documentation wiki](https://github.com/mal-lang/mal-documentation/wiki) documents the MAL syntax and sematics and describes how languages are built.
 
-### Key Infrastructure
+### Key infrastructure
 
-- The [MAL Toolbox](https://github.com/mal-lang/mal-toolbox), which contains support for building asset instance models from a given MAL language and then generating the corresponding attack graph from the asset instance model.
+- The [MAL toolbox](https://github.com/mal-lang/mal-toolbox), which contains support for building asset instance models from a given MAL language and then generating the corresponding attack graph from the asset instance model.
 
-- The [MAL Simulator](https://github.com/mal-lang/mal-simulator), which is an infrastructure for using the MAL attack graphs as a game board where defender and attacker agents can “play” against each other. It can be used as a simulator for machine learning of the agents.
+- The [MAL simulator](https://github.com/mal-lang/mal-simulator), which is an infrastructure for using the MAL attack graphs as a game board where defender and attacker agents can “play” against each other. It can be used as a simulator for machine learning of the agents.
 
-- The [MAL-GUI](https://github.com/mal-lang/mal-gui), which is a super simple drag-n-drop studio for creating instance models given some chosen MAL-language. (However, it does not support visualization for attack graphs, for that we recommend Neo4j - see the MAL Toolbox documentation.)
+- The [MAL-GUI](https://github.com/mal-lang/mal-gui), which is a super simple drag-n-drop studio for creating instance models given some chosen MAL-language.
 
 ### Tutorials
 
 - [MAL toolbox tutorial](https://github.com/mal-lang/mal-toolbox-tutorial) to learn how the MAL tools work.
 
-### Additional Infrastructure
+### Additional infrastructure
 
 - The [mal-vs-code-extension](https://github.com/mal-lang/mal-vscode-extension) for MAL language support in VS Code.
 - [mal-language-server](https://github.com/mal-lang/mal-ls)
 
-### MAL Languages
+### MAL languages
 
 - [exampleLang](https://github.com/mal-lang/exampleLang), which is a language devised to demonstrate how MAL works and good to start with if you are new to MAL.
 
