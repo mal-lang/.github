@@ -35,7 +35,7 @@ MAL has been developed by Software Systems Architecture and Security group [[1]]
 
 ### MAL specification
 
-- [MAL documentation wiki](https://github.com/mal-lang/mal-documentation/wiki) documents the MAL syntax and sematics and describes how languages are built.
+- [MAL specification wiki](https://github.com/mal-lang/mal-specification/wiki) documents the MAL syntax and sematics and describes how languages are built.
 
 ### Key infrastructure
 
@@ -47,7 +47,7 @@ MAL has been developed by Software Systems Architecture and Security group [[1]]
 
 ### Tutorials
 
-- [MAL toolbox tutorial](https://github.com/mal-lang/mal-toolbox-tutorial) to learn how the MAL tools work.
+- [MAL tutorials](https://github.com/mal-lang/mal-tutorials) to learn how the MAL tools work.
 
 ### Additional infrastructure
 
