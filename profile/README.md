@@ -35,38 +35,39 @@ The usual workflow one would do with MAL is the following:
 graph LR
     %% Main nodes
     Step1(<b>1. Create/Load malLang</b><br/>.mal-file definition)
-    Step2(<b>2. Build Model</b><br/>MAL-toolbox or MAL-GUI)
-    Step3(<b>3. Simulate Attacks</b><br/>MAL-simulator)
+    Step3(<b>3. Running Simulations</b><br/>MAL-simulator)
 
-    %% Initial flow
-    Step1 --> Step2
-
-    %% PATH 1: Scenario File (Connected by a dotted line)
-    Step2 -.- Path1
-    subgraph Graphic_Approach ["Graphical Approach (MAL-GUI)"]
-        Path1["<b>Scenario File (.yml)</b><br/><i>Includes: lang + model + agents</i>"]
+    %% PATH A: Graphical path (Connected by a dotted line)
+    Step1 -.- Path2_A
+    subgraph Graphic_Approach ["<b>2A. Graphic Approach (MAL-GUI)</b>"]
+        Path2_A["<b>Model Creation</b><br/><i>Via MAL-GUI</i>"]
+        Path3_A["<b>Scenario File (.yml)</b><br/><i>Includes: lang + model + agents</i>"]
+        Path2_A --> Path3_A
     end
 
-    %% PATH 2: Programmatic (Connected by a dotted line)
-    Step2 -.- Path2_A
+    %% PATH B: Programmatic path (Connected by a dotted line)
+    Step1 -.- Path2_B
     
-    subgraph Programmatic_Flow ["Programmatic Approach (MAL-toolbox)"]
-        Path2_A["<b>Create AttackGraph</b><br/><i>Includes: lang + model</i>"]
-        Path2_B["<b>Add Agent Settings</b>"]
-        Path2_A --> Path2_B
+    subgraph Programmatic_Flow ["<b>2B. Programmatic Approach (MAL-toolbox)</b>"]
+        Path2_B["<b>Model Creation</b><br/><i>Via MAL-Toolbox</i>"]
+        Path3_B["<b>Create AttackGraph</b><br/><i>Includes: lang + model</i>"]
+        Path4_B["<b>Add Agent Settings</b>"]
+        Path2_B --> Path3_B --> Path4_B
     end
 
-    Path1 --> Step3
-    Path2_B --> Step3
+    Path3_A--> Step3
+    Path4_B --> Step3
 
     %% Aesthetics and Colours
     style Step1 fill:#f8f9fa,stroke:#343a40
-    style Step2 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
     style Step3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
     
-    style Path1 fill:#fff3e0,stroke:#ef6c00
-    style Path2_A fill:#f3e5f5,stroke:#7b1fa2
-    style Path2_B fill:#f3e5f5,stroke:#7b1fa2
+    style Path2_A fill:#fff3e0,stroke:#ef6c00
+    style Path2_B fill:#fff3e0,stroke:#ef6c00
+    style Path3_A fill:#ede7f6,stroke:#5e35b1
+    style Path3_B fill:#ede7f6,stroke:#5e35b1
+    style Path4_B fill:#ede7f6,stroke:#5e35b1
+    
     style Programmatic_Flow fill:#fafafa,stroke:#9e9e9e,stroke-dasharray: 5 5
     style Graphic_Approach fill:#fafafa,stroke:#9e9e9e,stroke-dasharray: 5 5
 ```
