@@ -26,9 +26,51 @@ MAL enables the creation of a **cybersecurity digital twin**, facilitating sever
 
 ## The MAL workflow
 The usual workflow one would do with MAL is the following:
-1. You either use a pre-existing malLang or write your own.
-2. Load it with the modeling tool ([MAL toolbox](https://github.com/mal-lang/mal-toolbox)), and create a model programmatically (using Python) or manually with the [MAL-GUI](https://github.com/mal-lang/mal-gui).
-3. Simulate attacks with the simulation tool ([MAL simulator](https://github.com/mal-lang/mal-simulator)).
+1. You either use a pre-existing **malLang** or write your own.
+2. Load your malLang and create a **model**, either programmatically using Python modules via [MAL toolbox](https://github.com/mal-lang/mal-toolbox) or manually with the [MAL-GUI](https://github.com/mal-lang/mal-gui).
+3. **Simulate attacks** with the simulation tool ([MAL simulator](https://github.com/mal-lang/mal-simulator)).
+
+```mermaid
+
+graph LR
+    %% Main nodes
+    Step1(<b>1. Create/Load malLang</b><br/>.mal-file definition)
+    Step3(<b>3. Running Simulations</b><br/>MAL-simulator)
+
+    %% PATH A: Graphical path (Connected by a dotted line)
+    Step1 -.- Path2_A
+    subgraph Graphic_Approach ["<b>2A. Graphic Approach (MAL-GUI)</b>"]
+        Path2_A["<b>Model Creation</b><br/><i>Via MAL-GUI</i>"]
+        Path3_A["<b>Scenario File (.yml)</b><br/><i>Includes: lang + model + agents</i>"]
+        Path2_A --> Path3_A
+    end
+
+    %% PATH B: Programmatic path (Connected by a dotted line)
+    Step1 -.- Path2_B
+    
+    subgraph Programmatic_Flow ["<b>2B. Programmatic Approach (MAL-toolbox)</b>"]
+        Path2_B["<b>Model Creation</b><br/><i>Via MAL-Toolbox</i>"]
+        Path3_B["<b>Create AttackGraph</b><br/><i>Includes: lang + model</i>"]
+        Path4_B["<b>Add Agent Settings</b>"]
+        Path2_B --> Path3_B --> Path4_B
+    end
+
+    Path3_A--> Step3
+    Path4_B --> Step3
+
+    %% Aesthetics and Colours
+    style Step1 fill:#f8f9fa,stroke:#343a40
+    style Step3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    
+    style Path2_A fill:#fff3e0,stroke:#ef6c00
+    style Path2_B fill:#fff3e0,stroke:#ef6c00
+    style Path3_A fill:#ede7f6,stroke:#5e35b1
+    style Path3_B fill:#ede7f6,stroke:#5e35b1
+    style Path4_B fill:#ede7f6,stroke:#5e35b1
+    
+    style Programmatic_Flow fill:#fafafa,stroke:#9e9e9e,stroke-dasharray: 5 5
+    style Graphic_Approach fill:#fafafa,stroke:#9e9e9e,stroke-dasharray: 5 5
+```
 
 ## MAL resources
 MAL has been developed by Software Systems Architecture and Security group [[1]](https://www.kth.se/cs/nse/research/software-systems-architecture-and-security) [[2]](https://github.com/KTH-SSAS) at KTH Royal Institute of Technology in Sweden and this GitHub organization gathers results of many of the various projects that the research group has been working on over the years. A few highlights of these are:
