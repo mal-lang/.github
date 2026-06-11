@@ -111,4 +111,4 @@ More academic papers related to various MAL projects have been produced than wha
 - Wojciech Wideł, Simon Hacks, Mathias Ekstedt, Pontus Johnson, Robert Lagerström, The meta attack language - a formal description, Computers & Security, Volume 130, 2023, 103284, ISSN 0167-4048, https://doi.org/10.1016/j.cose.2023.103284
 
 ### ..And more
-Check out [other MAL related projects](https://github.com/mal-lang/mal-specification/wiki/External-MAL-projects)!
+Check out [more MAL related projects](https://github.com/mal-lang/mal-specification/wiki/The-extended-MAL-universe)!
